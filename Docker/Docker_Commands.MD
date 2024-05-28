@@ -7,6 +7,10 @@ docker search httpd
 ```sh
 docker image pull <image_name>:<image_version/tag>
 ```
+2.1 Crearte a docker image from a Dockerfile in the current directory
+```sh
+docker build -t <image_name>:<image_version/tag> .
+```
 
 3. List out docker images from your local system
 ```sh
