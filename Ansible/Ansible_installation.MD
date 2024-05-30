@@ -51,13 +51,13 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    [ansadmin@controller ~]$ sudo usermod -aG docker ansadmin
    
    # verify the user added to the group
-   [ansadmin@controller ~]$ id ansadmin
+   [ansadmin@ansible-node ~]$ id ansadmin
 
    # start docker services 
-   [ansadmin@controller ~]$ sudo service docker start
+   [ansadmin@ansible-node ~]$ sudo service docker start
 
    # check the docker service status
-   [ansadmin@controller ~]$ service docker status 
+   [ansadmin@ansible-node ~]$ service docker status 
    
    ```
 1. Create a directory /etc/ansible and create an inventory file called "hosts" add control node and managed hosts IP addresses to it. 
@@ -67,5 +67,5 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    
 1. Run ansible command as ansadmin user it should be successful (Master)
    ```sh 
-   ansible all -m ping
+   [ansadmin@ansible-node ~]$ ansible all -m ping
    ```
